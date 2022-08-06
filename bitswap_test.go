@@ -8,14 +8,6 @@ import (
 	"testing"
 	"time"
 
-	bitswap "github.com/ipfs/go-bitswap"
-	deciface "github.com/ipfs/go-bitswap/decision"
-	decision "github.com/ipfs/go-bitswap/internal/decision"
-	bssession "github.com/ipfs/go-bitswap/internal/session"
-	bsmsg "github.com/ipfs/go-bitswap/message"
-	pb "github.com/ipfs/go-bitswap/message/pb"
-	testinstance "github.com/ipfs/go-bitswap/testinstance"
-	tn "github.com/ipfs/go-bitswap/testnet"
 	blocks "github.com/ipfs/go-block-format"
 	cid "github.com/ipfs/go-cid"
 	detectrace "github.com/ipfs/go-detect-race"
@@ -27,6 +19,14 @@ import (
 	p2ptestutil "github.com/libp2p/go-libp2p-netutil"
 	travis "github.com/libp2p/go-libp2p-testing/ci/travis"
 	tu "github.com/libp2p/go-libp2p-testing/etc"
+	bitswap "github.com/uss2022sayahi/go-bitswap"
+	deciface "github.com/uss2022sayahi/go-bitswap/decision"
+	decision "github.com/uss2022sayahi/go-bitswap/internal/decision"
+	bssession "github.com/uss2022sayahi/go-bitswap/internal/session"
+	bsmsg "github.com/uss2022sayahi/go-bitswap/message"
+	pb "github.com/uss2022sayahi/go-bitswap/message/pb"
+	testinstance "github.com/uss2022sayahi/go-bitswap/testinstance"
+	tn "github.com/uss2022sayahi/go-bitswap/testnet"
 )
 
 // FIXME the tests are really sensitive to the network delay. fix them to work
@@ -178,9 +178,9 @@ func TestUnwantedBlockNotAdded(t *testing.T) {
 
 // Tests that a received block is returned to the client and stored in the
 // blockstore in the following scenario:
-// - the want for the block has been requested by the client
-// - the want for the block has not yet been sent out to a peer
-//   (because the live request queue is full)
+//   - the want for the block has been requested by the client
+//   - the want for the block has not yet been sent out to a peer
+//     (because the live request queue is full)
 func TestPendingBlockAdded(t *testing.T) {
 	ctx := context.Background()
 	net := tn.VirtualNetwork(mockrouting.NewServer(), delay.Fixed(kNetworkDelay))

@@ -3,8 +3,8 @@ package session
 import (
 	"testing"
 
-	"github.com/ipfs/go-bitswap/internal/testutil"
 	cid "github.com/ipfs/go-cid"
+	"github.com/uss2022sayahi/go-bitswap/internal/testutil"
 )
 
 func TestEmptySessionWants(t *testing.T) {

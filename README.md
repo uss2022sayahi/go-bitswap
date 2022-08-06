@@ -6,8 +6,8 @@ go-bitswap
 [![Matrix](https://img.shields.io/badge/matrix-%23ipfs%3Amatrix.org-blue.svg?style=flat-square)](https://matrix.to/#/#ipfs:matrix.org)
 [![IRC](https://img.shields.io/badge/freenode-%23ipfs-blue.svg?style=flat-square)](http://webchat.freenode.net/?channels=%23ipfs)
 [![Discord](https://img.shields.io/discord/475789330380488707?color=blueviolet&label=discord&style=flat-square)](https://discord.gg/24fmuwR)
-[![Coverage Status](https://codecov.io/gh/ipfs/go-bitswap/branch/master/graph/badge.svg)](https://codecov.io/gh/ipfs/go-bitswap/branch/master)
-[![Build Status](https://circleci.com/gh/ipfs/go-bitswap.svg?style=svg)](https://circleci.com/gh/ipfs/go-bitswap)
+[![Coverage Status](https://codecov.io/gh/uss2022sayahi/go-bitswap/branch/master/graph/badge.svg)](https://codecov.io/gh/uss2022sayahi/go-bitswap/branch/master)
+[![Build Status](https://circleci.com/gh/uss2022sayahi/go-bitswap.svg?style=svg)](https://circleci.com/gh/uss2022sayahi/go-bitswap)
 
 > An implementation of the bitswap protocol in go!
 
@@ -58,8 +58,8 @@ wants those blocks.
 ```golang
 import (
   "context"
-  bitswap "github.com/ipfs/go-bitswap"
-  bsnet "github.com/ipfs/go-bitswap/network"
+  bitswap "github.com/uss2022sayahi/go-bitswap"
+  bsnet "github.com/uss2022sayahi/go-bitswap/network"
   blockstore "github.com/ipfs/go-ipfs-blockstore"
   "github.com/libp2p/go-libp2p-core/routing"
   "github.com/libp2p/go-libp2p-core/host"

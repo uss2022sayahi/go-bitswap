@@ -11,11 +11,11 @@ import (
 	"time"
 
 	"github.com/benbjohnson/clock"
-	"github.com/ipfs/go-bitswap/internal/defaults"
-	"github.com/ipfs/go-bitswap/internal/testutil"
-	message "github.com/ipfs/go-bitswap/message"
-	pb "github.com/ipfs/go-bitswap/message/pb"
 	"github.com/ipfs/go-metrics-interface"
+	"github.com/uss2022sayahi/go-bitswap/internal/defaults"
+	"github.com/uss2022sayahi/go-bitswap/internal/testutil"
+	message "github.com/uss2022sayahi/go-bitswap/message"
+	pb "github.com/uss2022sayahi/go-bitswap/message/pb"
 
 	blocks "github.com/ipfs/go-block-format"
 	"github.com/ipfs/go-cid"

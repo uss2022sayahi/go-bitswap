@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ipfs/go-bitswap/internal/testutil"
 	"github.com/libp2p/go-libp2p-core/peer"
 	"github.com/stretchr/testify/require"
+	"github.com/uss2022sayahi/go-bitswap/internal/testutil"
 )
 
 type mockConnEvent struct {

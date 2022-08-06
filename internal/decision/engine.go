@@ -9,9 +9,6 @@ import (
 
 	"github.com/google/uuid"
 
-	bsmsg "github.com/ipfs/go-bitswap/message"
-	pb "github.com/ipfs/go-bitswap/message/pb"
-	wl "github.com/ipfs/go-bitswap/wantlist"
 	blocks "github.com/ipfs/go-block-format"
 	"github.com/ipfs/go-cid"
 	bstore "github.com/ipfs/go-ipfs-blockstore"
@@ -22,6 +19,9 @@ import (
 	"github.com/ipfs/go-peertaskqueue/peertracker"
 	process "github.com/jbenet/goprocess"
 	"github.com/libp2p/go-libp2p-core/peer"
+	bsmsg "github.com/uss2022sayahi/go-bitswap/message"
+	pb "github.com/uss2022sayahi/go-bitswap/message/pb"
+	wl "github.com/uss2022sayahi/go-bitswap/wantlist"
 )
 
 // TODO consider taking responsibility for other types of requests. For

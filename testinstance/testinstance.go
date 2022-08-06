@@ -4,9 +4,6 @@ import (
 	"context"
 	"time"
 
-	bitswap "github.com/ipfs/go-bitswap"
-	bsnet "github.com/ipfs/go-bitswap/network"
-	tn "github.com/ipfs/go-bitswap/testnet"
 	ds "github.com/ipfs/go-datastore"
 	delayed "github.com/ipfs/go-datastore/delayed"
 	ds_sync "github.com/ipfs/go-datastore/sync"
@@ -15,6 +12,9 @@ import (
 	peer "github.com/libp2p/go-libp2p-core/peer"
 	p2ptestutil "github.com/libp2p/go-libp2p-netutil"
 	tnet "github.com/libp2p/go-libp2p-testing/net"
+	bitswap "github.com/uss2022sayahi/go-bitswap"
+	bsnet "github.com/uss2022sayahi/go-bitswap/network"
+	tn "github.com/uss2022sayahi/go-bitswap/testnet"
 )
 
 // NewTestInstanceGenerator generates a new InstanceGenerator for the given

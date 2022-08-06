@@ -7,14 +7,14 @@ import (
 	"testing"
 	"time"
 
-	bsmsg "github.com/ipfs/go-bitswap/message"
-	pb "github.com/ipfs/go-bitswap/message/pb"
-	bsnet "github.com/ipfs/go-bitswap/network"
-	tn "github.com/ipfs/go-bitswap/testnet"
 	ds "github.com/ipfs/go-datastore"
 	blocksutil "github.com/ipfs/go-ipfs-blocksutil"
 	mockrouting "github.com/ipfs/go-ipfs-routing/mock"
 	"github.com/multiformats/go-multistream"
+	bsmsg "github.com/uss2022sayahi/go-bitswap/message"
+	pb "github.com/uss2022sayahi/go-bitswap/message/pb"
+	bsnet "github.com/uss2022sayahi/go-bitswap/network"
+	tn "github.com/uss2022sayahi/go-bitswap/testnet"
 
 	"github.com/libp2p/go-libp2p-core/host"
 	"github.com/libp2p/go-libp2p-core/network"

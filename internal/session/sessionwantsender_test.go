@@ -6,12 +6,12 @@ import (
 	"testing"
 	"time"
 
-	bsbpm "github.com/ipfs/go-bitswap/internal/blockpresencemanager"
-	bspm "github.com/ipfs/go-bitswap/internal/peermanager"
-	bsspm "github.com/ipfs/go-bitswap/internal/sessionpeermanager"
-	"github.com/ipfs/go-bitswap/internal/testutil"
 	cid "github.com/ipfs/go-cid"
 	peer "github.com/libp2p/go-libp2p-core/peer"
+	bsbpm "github.com/uss2022sayahi/go-bitswap/internal/blockpresencemanager"
+	bspm "github.com/uss2022sayahi/go-bitswap/internal/peermanager"
+	bsspm "github.com/uss2022sayahi/go-bitswap/internal/sessionpeermanager"
+	"github.com/uss2022sayahi/go-bitswap/internal/testutil"
 )
 
 type sentWants struct {

@@ -8,9 +8,9 @@ import (
 	"time"
 
 	"github.com/benbjohnson/clock"
-	"github.com/ipfs/go-bitswap/internal/testutil"
 	cid "github.com/ipfs/go-cid"
 	"github.com/libp2p/go-libp2p/p2p/protocol/ping"
+	"github.com/uss2022sayahi/go-bitswap/internal/testutil"
 )
 
 type mockPeerConn struct {

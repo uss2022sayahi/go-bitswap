@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"time"
 
-	engine "github.com/ipfs/go-bitswap/internal/decision"
-	"github.com/ipfs/go-bitswap/internal/defaults"
-	pb "github.com/ipfs/go-bitswap/message/pb"
 	cid "github.com/ipfs/go-cid"
 	process "github.com/jbenet/goprocess"
 	procctx "github.com/jbenet/goprocess/context"
+	engine "github.com/uss2022sayahi/go-bitswap/internal/decision"
+	"github.com/uss2022sayahi/go-bitswap/internal/defaults"
+	pb "github.com/uss2022sayahi/go-bitswap/message/pb"
 	"go.uber.org/zap"
 )
 
@@ -133,10 +133,10 @@ func (bs *Bitswap) sendBlocks(ctx context.Context, env *engine.Envelope) {
 	for _, b := range blocks {
 		dataSent += len(b.RawData())
 	}
-	bs.counterLk.Lock()
-	bs.counters.blocksSent += uint64(len(blocks))
-	bs.counters.dataSent += uint64(dataSent)
-	bs.counterLk.Unlock()
+	// bs.counterLk.Lock()
+	// bs.counters.blocksSent += uint64(len(blocks))
+	// bs.counters.dataSent += uint64(dataSent)
+	// bs.counterLk.Unlock()
 	bs.sentHistogram.Observe(float64(env.Message.Size()))
 	log.Debugw("sent message", "peer", env.Peer)
 }
