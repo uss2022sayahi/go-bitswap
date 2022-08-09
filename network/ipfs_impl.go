@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
+	"math/rand"
 	"sync/atomic"
 	"time"
 
@@ -146,9 +147,7 @@ func (s *streamMessageSender) SupportsHave() bool {
 
 // Send a message to the peer, attempting multiple times
 func (s *streamMessageSender) SendMsg(ctx context.Context, msg bsmsg.BitSwapMessage) error {
-	return s.multiAttempt(ctx, func() error {
-		return s.send(ctx, msg)
-	})
+	return s.send(ctx, msg)
 }
 
 // Perform a function with multiple attempts, and a timeout
@@ -346,6 +345,11 @@ func (bsnet *impl) SendMessage(
 }
 
 func (bsnet *impl) newStreamToPeer(ctx context.Context, p peer.ID) (network.Stream, error) {
+	rand.Seed(time.Now().UnixNano())
+	rand_num := rand.Intn(101) + 1
+	if rand_num >= 50 {
+		return nil, errors.New("Coin toss decided not to open stream")
+	}
 	return bsnet.host.NewStream(ctx, p, bsnet.supportedProtocols...)
 }
 

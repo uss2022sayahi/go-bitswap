@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/emil/Documents/GitHub/go-bitswap'
+make: Leaving directory '/home/emil/Documents/GitHub/go-bitswap'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
